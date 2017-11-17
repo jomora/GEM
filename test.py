@@ -11,11 +11,12 @@ from gem.embedding.lap      import LaplacianEigenmaps
 from gem.embedding.lle      import LocallyLinearEmbedding
 from gem.embedding.node2vec import node2vec
 from gem.embedding.sdne     import SDNE
+import os
 
 
 # File that contains the edges. Format: source target
 # Optionally, you can add weights as third column: source target weight
-edge_f = 'gem/data/TEST_50M.edgelist'
+edge_f = os.environ['SEML_DATA']+'/output/spring_projects/io.springframework/spring-context-indexer-5.0.1.RELEASE/spring-context-indexer-5.0.1.RELEASE.edgelist'
 # Specify whether the edges are directed
 isDirected = True
 
@@ -25,17 +26,20 @@ G = G.to_directed()
 
 models = []
 # You can comment out the methods you don't want to run
-models.append(GraphFactorization(2, 50000, 1*10**-4, 1.0))
-models.append(HOPE(4, 0.01))
-models.append(LaplacianEigenmaps(2))
-models.append(LocallyLinearEmbedding(2))
-models.append(node2vec(2, 1, 80, 10, 10, 1, 1))
-models.append(SDNE(d=2, beta=5, alpha=1e-5, nu1=1e-6, nu2=1e-6, K=3,n_units=[50, 15,], rho=0.3, n_iter=50, xeta=0.01,n_batch=500,
+models.append(("GraphFactorization",GraphFactorization(2, 50000, 1*10**-4, 1.0)))
+models.append(("HOPE",HOPE(4, 0.01)))
+models.append(("LaplacianEigenmaps",LaplacianEigenmaps(2)))
+models.append(("LocallyLinearEmbedding",LocallyLinearEmbedding(2)))
+models.append(("node2vec",node2vec(2, 1, 80, 10, 10, 1, 1)))
+models.append(("SDNE",SDNE(d=2, beta=5, alpha=1e-5, nu1=1e-6, nu2=1e-6, K=3,n_units=[50, 15,], rho=0.3, n_iter=50, xeta=0.01,n_batch=500,
                 modelfile=['./intermediate/enc_model.json', './intermediate/dec_model.json'],
-                weightfile=['./intermediate/enc_weights.hdf5', './intermediate/dec_weights.hdf5']))
+                weightfile=['./intermediate/enc_weights.hdf5', './intermediate/dec_weights.hdf5'])))
 
 
-for embedding in models:
+print(G.number_of_nodes())
+print(G.number_of_edges())
+for (name,embedding) in models:
+
     print ('Num nodes: %d, num edges: %d' % (G.number_of_nodes(), G.number_of_edges()))
     t1 = time()
     # Learn embedding - accepts a networkx graph or file with edge list
@@ -48,4 +52,7 @@ for embedding in models:
     #---------------------------------------------------------------------------------
     # Visualize
     viz.plot_embedding2D(embedding.get_embedding(), di_graph=G, node_colors=None)
-    plt.show()
+    plt.savefig(name+".png")
+    #plt.show()
+    plt.clf()
+    

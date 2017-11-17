@@ -115,3 +115,5 @@ gem/intermediate/*
 
 # images
 *.png
+.project
+.pydevproject
