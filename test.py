@@ -16,7 +16,7 @@ import os
 
 # File that contains the edges. Format: source target
 # Optionally, you can add weights as third column: source target weight
-edge_f = os.environ['SEML_DATA']+'/output/spring_projects/io.springframework/spring-context-indexer-5.0.1.RELEASE/spring-context-indexer-5.0.1.RELEASE.edgelist'
+edge_f = os.environ['SEML_DATA']+'/output/all/all.edgelist'
 # Specify whether the edges are directed
 isDirected = True
 
