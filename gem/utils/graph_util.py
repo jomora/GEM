@@ -6,10 +6,12 @@ import random
 import itertools
 import time
 import pdb
+from scipy.sparse import lil_matrix
 
 def transform_DiGraph_to_adj(di_graph):
     n = di_graph.number_of_nodes()
     adj = np.zeros((n ,n))
+    adj = lil_matrix((n,n))
     for st, ed, w in di_graph.edges(data='weight', default=1):
         adj[st, ed] = w
     return adj

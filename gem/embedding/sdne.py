@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 
 import numpy as np
 import scipy.io as sio
+import scipy.sparse as sp
 
 import sys
 sys.path.append('./')
@@ -95,19 +96,35 @@ class SDNE(StaticGraphEmbedding):
 			S = graph_util.randwalk_DiGraph_to_adj(graph, node_frac=self._node_frac, n_walks_per_node=self._n_walks_per_node, len_rw=self._len_rw)
 		else:
 			S = graph_util.transform_DiGraph_to_adj(graph)
-		if not np.allclose(S.T, S):
-			print("SDNE only works for symmetric graphs! Making the graph symmetric")
-		t1 = time()
-		S = (S + S.T)/2					# enforce S is symmetric
-		S -= np.diag(np.diag(S))		# enforce diagonal = 0
-		self._node_num = S.shape[0]		
-		n_edges = np.count_nonzero(S)	# Double counting symmetric edges deliberately to maintain autoencoder symmetry
-		# Create matrix B
-		B = np.ones(S.shape)
-		B[S != 0] = self._beta
+		if sp.issparse(S):
+			S = S.tocsr()
+			t1 = time()
+			S = (S + S.transpose())/2					# enforce S is symmetric
+			S = S - sp.lil_matrix( np.diag(S.diagonal())).tocsr()		# enforce diagonal = 0
+			self._node_num = S.shape[0]		
+			n_edges = S.count_nonzero()	# Double counting symmetric edges deliberately to maintain autoencoder symmetry
+			# Create matrix B
+			B = np.ones(S.shape)
+			B[(S != 0).toarray()] = self._beta
 
-		# compute degree of each node
-		deg = np.sum(S!=0, 1)
+			# compute degree of each node
+			deg = (S!=0).sum(1)
+			
+		else:
+			if not np.allclose(S.T, S):
+				print("SDNE only works for symmetric graphs! Making the graph symmetric")
+			t1 = time()
+			S = (S + S.T)/2					# enforce S is symmetric
+			S -= np.diag(np.diag(S))		# enforce diagonal = 0
+			self._node_num = S.shape[0]		
+			n_edges = np.count_nonzero(S)	# Double counting symmetric edges deliberately to maintain autoencoder symmetry
+			# Create matrix B
+			B = np.ones(S.shape)
+			B[S != 0] = self._beta
+
+			# compute degree of each node
+			
+			deg = np.sum(S!=0, 1)
 
 		
 		# Generate encoder, decoder and autoencoder

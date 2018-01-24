@@ -16,7 +16,8 @@ import os
 
 # File that contains the edges. Format: source target
 # Optionally, you can add weights as third column: source target weight
-edge_f = os.environ['SEML_DATA']+'/output/all/all.edgelist'
+# edge_f = os.environ['SEML_DATA']+'/output/all/all.edgelist'
+edge_f = 'gem/data/karate.edgelist'
 # Specify whether the edges are directed
 isDirected = True
 
@@ -31,9 +32,9 @@ models.append(("HOPE",HOPE(4, 0.01)))
 models.append(("LaplacianEigenmaps",LaplacianEigenmaps(2)))
 models.append(("LocallyLinearEmbedding",LocallyLinearEmbedding(2)))
 models.append(("node2vec",node2vec(2, 1, 80, 10, 10, 1, 1)))
-models.append(("SDNE",SDNE(d=2, beta=5, alpha=1e-5, nu1=1e-6, nu2=1e-6, K=3,n_units=[50, 15,], rho=0.3, n_iter=50, xeta=0.01,n_batch=500,
-                modelfile=['./intermediate/enc_model.json', './intermediate/dec_model.json'],
-                weightfile=['./intermediate/enc_weights.hdf5', './intermediate/dec_weights.hdf5'])))
+#models.append(("SDNE",SDNE(d=2, beta=5, alpha=1e-5, nu1=1e-6, nu2=1e-6, K=3,n_units=[50, 15,], rho=0.3, n_iter=50, xeta=0.01,n_batch=500,
+#                modelfile=['./intermediate/enc_model.json', './intermediate/dec_model.json'],
+#                weightfile=['./intermediate/enc_weights.hdf5', './intermediate/dec_weights.hdf5'])))
 
 
 print(G.number_of_nodes())
