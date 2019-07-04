@@ -1,0 +1,114 @@
+/home/guest1/jonas/code/GEM/gem/embedding/gf.py:6: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'Qt5Agg' by the following code:
+  File "test.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py", line 69, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')
+/home/guest1/jonas/code/GEM/gem/embedding/hope.py:6: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'Qt5Agg' by the following code:
+  File "test.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py", line 69, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')
+/home/guest1/jonas/code/GEM/gem/embedding/lap.py:6: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'Qt5Agg' by the following code:
+  File "test.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py", line 69, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')
+/home/guest1/jonas/code/GEM/gem/embedding/lle.py:6: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'Qt5Agg' by the following code:
+  File "test.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py", line 69, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')
+/home/guest1/jonas/code/GEM/gem/embedding/node2vec.py:6: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'Qt5Agg' by the following code:
+  File "test.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py", line 69, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')
+/home/guest1/jonas/code/GEM/gem/embedding/sdne.py:6: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'Qt5Agg' by the following code:
+  File "test.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py", line 69, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')
+/home/guest1/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+/home/guest1/anaconda3/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+  return f(*args, **kwds)
+554553
+1844323
+Num nodes: 554553, num edges: 1844323
+Could not import C++ module for Graph Factorization. Reverting to python implementation. Please recompile graphFac_ext from graphFac.cpp using bjam
+		Iter id: 0, Objective value: 1.84443e+06, f1: 1.84432e+06, f2: 110.836
+		Iter id: 10000, Objective value: 1.84418e+06, f1: 1.84413e+06, f2: 51.2456
+		Iter id: 20000, Objective value: 1.84412e+06, f1: 1.84406e+06, f2: 60.7272
+		Iter id: 30000, Objective value: 1.84409e+06, f1: 1.84402e+06, f2: 68.4045
+		Iter id: 40000, Objective value: 1.84407e+06, f1: 1.84399e+06, f2: 72.7819
+graph_factor_sgd:
+	Training time: 537894.561681
+Traceback (most recent call last):
+  File "test.py", line 49, in <module>
+    K.get_session()#K.tf.Session(config=K.tf.ConfigProto(allow_soft_placement=True, log_device_placement=True)))
+  File "/home/guest1/jonas/code/GEM/gem/evaluation/evaluate_graph_reconstruction.py", line 14, in evaluateStaticGraphReconstruction
+    # evaluation
+  File "/home/guest1/jonas/code/GEM/gem/embedding/gf.py", line 106, in get_reconstructed_adj
+    if j <= i:
+MemoryError

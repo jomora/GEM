@@ -1,0 +1,107 @@
+/home/guest1/jonas/code/GEM/gem/embedding/gf.py:6: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'Qt5Agg' by the following code:
+  File "test.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py", line 69, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')
+/home/guest1/jonas/code/GEM/gem/embedding/hope.py:6: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'Qt5Agg' by the following code:
+  File "test.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py", line 69, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')
+/home/guest1/jonas/code/GEM/gem/embedding/lap.py:6: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'Qt5Agg' by the following code:
+  File "test.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py", line 69, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')
+/home/guest1/jonas/code/GEM/gem/embedding/lle.py:6: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'Qt5Agg' by the following code:
+  File "test.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py", line 69, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')
+/home/guest1/jonas/code/GEM/gem/embedding/node2vec.py:6: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'Qt5Agg' by the following code:
+  File "test.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py", line 69, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')
+/home/guest1/jonas/code/GEM/gem/embedding/sdne.py:6: UserWarning: 
+This call to matplotlib.use() has no effect because the backend has already
+been chosen; matplotlib.use() must be called *before* pylab, matplotlib.pyplot,
+or matplotlib.backends is imported for the first time.
+
+The backend was *originally* set to 'Qt5Agg' by the following code:
+  File "test.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/pyplot.py", line 69, in <module>
+    from matplotlib.backends import pylab_setup
+  File "/home/guest1/anaconda3/lib/python3.6/site-packages/matplotlib/backends/__init__.py", line 14, in <module>
+    line for line in traceback.format_stack()
+
+
+  matplotlib.use('Agg')
+/home/guest1/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Using TensorFlow backend.
+/home/guest1/anaconda3/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+  return f(*args, **kwds)
+Traceback (most recent call last):
+  File "test.py", line 25, in <module>
+    G = G.to_directed()
+  File "/home/guest1/.local/lib/python3.6/site-packages/networkx/classes/graph.py", line 1475, in to_directed
+    for u, nbrs in self.adj.items()
+  File "/home/guest1/.local/lib/python3.6/site-packages/networkx/classes/digraph.py", line 670, in add_edges_from
+    for e in ebunch:
+  File "/home/guest1/.local/lib/python3.6/site-packages/networkx/classes/graph.py", line 1476, in <genexpr>
+    for v, data in nbrs.items())
+  File "/home/guest1/anaconda3/lib/python3.6/copy.py", line 185, in deepcopy
+    _keep_alive(x, memo) # Make sure x lives at least as long as d
+KeyboardInterrupt
